@@ -1,0 +1,97 @@
+.main {
+  position: relative;
+}
+
+.columns {
+  padding: 2.5em 12%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2em;
+  border-bottom: 1px solid #aaa;
+  color: #333;
+}
+
+.socials {
+  font-size: 1.5em;
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  margin-bottom: 1em;
+  color: inherit;
+}
+
+.contactInfo a p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  color: inherit;
+}
+
+.contactInfo svg {
+  margin-right: 1em;
+  font-size: 1.5em;
+}
+
+.col2 {
+  display: flex;
+  gap: 2em;
+  color: #444;
+}
+
+.col2 a {
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.col2 a:hover {
+  color: var(--brandColor);
+}
+
+.col3 {
+  width: 22em;
+}
+
+.logo {
+  width: fit-content;
+  margin-bottom: 2em;
+  text-align: left;
+}
+
+.logo h1 {
+  font-weight: 700;
+  font-size: 2em;
+  color: var(--darkerBrandColor);
+}
+
+.logo p {
+  letter-spacing: 14px;
+  text-wrap: nowrap;
+  color: var(--darkerBrandColor);
+}
+
+.col3 .info {
+  line-height: 1.8em;
+  color: #444;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: min-content;
+  color: #444;
+  overflow: hidden;
+  padding: 2em 12%;
+}
+
+@media screen and (width <= 460px) {
+  .col2 {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .logo p {
+    letter-spacing: 13px;
+  }
+}

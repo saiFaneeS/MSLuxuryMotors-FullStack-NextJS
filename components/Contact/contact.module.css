@@ -1,0 +1,200 @@
+.main {
+  padding: 8em 12%;
+  background-color: #111;
+}
+
+.titleBar {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1em;
+}
+
+.titleBar h2:first-child {
+  font-weight: 800;
+  letter-spacing: 1px;
+  /* animation: title1 1s; */
+}
+
+@keyframes title1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.titleBar h2:last-child {
+  font-weight: 500;
+  letter-spacing: 3px;
+  /* animation: title2 2s; */
+}
+
+@keyframes title2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.desc {
+  color: #aaa;
+  text-align: center;
+  margin-bottom: 6em;
+  /* animation: title2 3s; */
+}
+
+.columns {
+  display: flex;
+}
+
+.leftCol {
+  display: flex;
+  justify-content: center;
+  flex-basis: 40%;
+  height: 32em;
+}
+
+.leftCol .image {
+  border-radius: 5px;
+  overflow: hidden;
+  width: 25em;
+}
+
+@media screen and (width <= 1024px) {
+  .leftCol .image {
+    width: 20em;
+  }
+}
+
+@media screen and (width <= 762px) {
+  .columns {
+    flex-direction: column;
+    gap: 2em;
+  }
+}
+
+.leftCol img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.rightCol {
+  flex-basis: 60%;
+  padding: 0 2em;
+  margin: auto 0;
+}
+
+.rightCol .contact {
+  /* animation: contact 1s; */
+  position: relative;
+  text-align: left;
+}
+
+@keyframes contact {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+.rightCol h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1em;
+}
+
+.rightCol label {
+  color: #eee;
+}
+
+.rightCol input,
+.rightCol textarea {
+  width: 100%;
+  padding: 0.3em;
+  border: 1px solid #444;
+  background-color: #222;
+  caret-color: #fff;
+  font-size: 1.1em;
+  color: #fff;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+  resize: none;
+  border-radius: 2px;
+  font-family: sans-serif;
+}
+
+
+
+.rightCol textarea {
+  height: 5em;
+}
+
+.rightCol .submit {
+  background-color: var(--brandColor);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  width: 100%;
+}
+
+.firstI {
+  /* animation: first 1s; */
+  position: relative;
+}
+
+@keyframes first {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
+}
+.secI {
+  /* animation: second 1s; */
+  position: relative;
+}
+
+@keyframes second {
+  0% {
+    right: -120%;
+  }
+  100% {
+    right: 0;
+  }
+}
+.thirdI {
+  /* animation: third 1s; */
+  position: relative;
+}
+
+@keyframes third {
+  0% {
+    right: -140%;
+  }
+  100% {
+    right: 0;
+  }
+}
+.fourthI {
+  /* animation: fourth 1s; */
+  position: relative;
+}
+
+@keyframes fourth {
+  0% {
+    right: -160%;
+  }
+  100% {
+    right: 0;
+  }
+}

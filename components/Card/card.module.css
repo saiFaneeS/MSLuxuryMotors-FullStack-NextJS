@@ -1,0 +1,168 @@
+.card {
+  min-height: min-content;
+  max-height: fit-content;
+  padding: 1em;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3em;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+
+.cardImage {
+  height: 12em;
+  overflow: hidden;
+  border-radius: 0.5em;
+  transition: 0.3s ease;
+}
+
+.cardImage img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.cardTitle {
+  color: #222;
+  font-weight: 700;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+.priceTag {
+  color: #444;
+  font-weight: 600;
+}
+
+.priceTag p:nth-child(1) {
+  margin-bottom: 0.5em;
+}
+
+.priceTag span {
+  color: var(--brandColor);
+}
+
+.cardDesc {
+  color: #555;
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+
+.btns {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 1em;
+}
+
+.cardCta {
+  color: #fff;
+  background-color: #333;
+  transition: 0.2s;
+}
+
+.cardCta:hover {
+  gap: 10em;
+  background-color: var(--darkerBrandColor);
+}
+
+.cardCtaAlt {
+  padding: 1em 4em;
+  background-color: #aaa;
+  width: 5em;
+  border-radius: 0.4em;
+}
+
+.pricesAlt {
+  background-color: #aaa;
+  padding: 0.5em;
+  width: 10em;
+  border-radius: 1em;
+}
+
+.imgAlt {
+  background-color: #aaa;
+  border-radius: 0.5em;
+  height: 12em;
+  position: relative;
+  overflow: hidden;
+}
+
+.imgAlt::before {
+  content: "";
+  background-color: #fff;
+  filter: blur(40px);
+  width: 20em;
+  height: 1em;
+  position: absolute;
+  top: 50%;
+  rotate: -45deg;
+  animation: shine 2s infinite;
+}
+
+.imgAlt::after {
+  content: "";
+  background-color: #fff;
+  filter: blur(40px);
+  width: 20em;
+  height: 1em;
+  position: absolute;
+  top: 50%;
+  rotate: -45deg;
+  animation: shine2 2s infinite;
+}
+
+.imgAlt::after {
+  content: "";
+  background-color: #fff;
+  filter: blur(40px);
+  width: 20em;
+  height: 1em;
+  position: absolute;
+  top: 50%;
+  rotate: -45deg;
+  animation: shine4 2s infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes shine2 {
+  0% {
+    left: -150%;
+  }
+  50% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+@keyframes shine3 {
+  0% {
+    left: -200%;
+  }
+  50% {
+    left: -200%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+@media screen and (width >= 992px) {
+  .card {
+    width: 25em;
+  }
+}

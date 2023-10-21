@@ -1,0 +1,113 @@
+.main {
+  padding: 3em 12%;
+  overflow: hidden;
+}
+
+.panel1 {
+  margin-bottom: 4em;
+  padding: 2em 1.5em;
+  border-radius: 0.5em;
+  animation: panel 1s;
+  position: relative;
+}
+
+@keyframes panel {
+  0% {
+    bottom: -50em;
+  }
+  50% {
+    bottom: -50em;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+.panel1 h2 {
+  color: #222;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.panel1 h2:before {
+  content: "";
+  background-color: var(--brandColor);
+  width: 4px;
+  height: 1.4em;
+  position: absolute;
+  left: 0px;
+}
+
+.panel1 h2:after {
+  content: "MS Luxury Motors";
+  color: #eee;
+  font-size: 3em;
+  position: absolute;
+  left: 0.3em;
+  top: 0;
+  z-index: -1;
+}
+
+.panel1 p {
+  color: #555;
+  line-height: 1.7em;
+}
+
+.panel2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+}
+
+.item {
+  padding: 2em 1.5em;
+  padding-left: 2em;
+  background-color: #fff; 
+  border: 2px solid var(--brandColor);
+  box-shadow: 4px 4px 20px #2d2d2d16;
+  border-radius: 0.5em;
+  min-height: fit-content;
+  animation: panels 1s;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+@keyframes panels {
+  0% {
+    bottom: -100%;
+  }
+  50% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+.item:hover {
+  scale: 1.01;
+  box-shadow: 6px 6px 30px #2d2d2d2a;
+}
+
+.item h3 {
+  color: #222;
+  margin-bottom: 0.8em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.item h3 svg {
+  font-size: 1.2em;
+}
+
+.item p {
+  color: #555;
+  line-height: 1.7em;
+}
+
+@media screen and (width <= 776px) {
+  .panel2 {
+    grid-template-columns: 1fr;
+  }
+}

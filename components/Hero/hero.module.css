@@ -1,0 +1,132 @@
+.main {
+  height: 100%;
+  display: flex;
+  gap: 2em;
+  height: 80%;
+  max-height: fit-content;
+  padding: 4em 0;
+  padding-left: 12%;
+  background-color: #111;
+  margin-bottom: 6em;
+  color: #fff;
+  overflow: hidden;
+}
+
+.col1 {
+  flex-basis: 30%;
+  padding-right: 1em;
+}
+
+.col2 {
+  flex-basis: 70%;
+  display: flex;
+  gap: 1em;
+  position: relative;
+  filter: opacity(1);
+  animation: panels 1s ease;
+}
+
+@keyframes panels {
+  0% {
+    right: -100%;
+    gap: -4em;
+    filter: opacity(0);
+  }
+  50% {
+    filter: opacity(0);
+  }
+  100% {
+    right: 0;
+    filter: opacity(1);
+  }
+}
+
+.title {
+  color: inherit;
+}
+
+.title span {
+  color: var(--brandColor);
+}
+
+.desc {
+  color: #ccc;
+  margin: 4em 0;
+  line-height: 2em;
+}
+
+.cta {
+  font-size: 1em;
+  padding: 0.4em 2em;
+  color: #fff;
+  border-radius: 2px;
+  background-color: var(--brandColor);
+  border: 1px solid var(--brandColor);
+  position: relative;
+  z-index: 10;
+}
+
+.cta:hover {
+  color: var(--brandColor);
+  background-color: transparent;
+}
+
+.panel {
+  width: 33%;
+  height: 30em;
+  transition: 0.3s;
+}
+
+.panel:hover {
+  scale: 1.02;
+}
+
+.panel1 {
+  background: #222 url(../../public/hero/lincoln.png) left no-repeat;
+}
+
+.panel2 {
+  background: #222 url(../../public/hero/audi.png) left no-repeat;
+}
+
+.panel3 {
+  background: #222 url(../../public/hero/chevrolet-limo.png) left no-repeat;
+}
+
+@media screen and (width <= 992px) {
+  .col2 {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .panel {
+    height: 100%;
+    width: 100%;
+    background-position: left;
+  }
+}
+
+.heroImgContainer {
+  display: none;
+}
+
+@media screen and (width <= 480px) {
+  .main .col1 {
+    flex-basis: 100%;
+  }
+
+  .heroImgContainer {
+    overflow-x: hidden;
+    width: 70%;
+    display: block;
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    z-index: 1;
+    filter: grayscale(100%) opacity(10%);
+    overflow: hidden;
+  }
+
+  .col2 {
+    display: none;
+  }
+}

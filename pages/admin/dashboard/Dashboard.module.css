@@ -1,0 +1,15 @@
+.main {
+  width: 100%;
+}
+
+.topCardsContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.offerCard {
+  padding: 1.5em;
+  height: min-content;
+  margin-bottom: 2em;
+}
+

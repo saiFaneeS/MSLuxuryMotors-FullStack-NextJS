@@ -1,0 +1,31 @@
+.main {
+  border: 1px solid #ccc;
+  background-color: #fefefe;
+  border-radius: 1em;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 3em;
+}
+
+.form input,
+.form textarea {
+  background-color: #f6f6f6;
+  color: #222;
+  margin-bottom: 1em;
+  font-size: 1em;
+  font-family: sans-serif;
+  width: 100%;
+  padding: 0.5em;
+  border: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  resize: none;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border: 1px solid var(--brandColor);
+}

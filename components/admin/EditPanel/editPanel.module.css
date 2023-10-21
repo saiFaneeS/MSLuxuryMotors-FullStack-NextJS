@@ -1,0 +1,56 @@
+.editPanel {
+  background-color: #fff;
+  /* background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px); */
+  /* border: 1px solid #ddd; */
+  border-radius: 5px;
+  box-shadow: 5px 10px 45px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  height: fit-content;
+  padding: 2em;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.titleBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.title {
+  color: #333;
+}
+
+.editForm input,
+.editForm textarea {
+  background-color: #eee;
+  color: #222;
+  margin-bottom: 1em;
+  font-size: 1em;
+  font-family: sans-serif;
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  resize: none;
+}
+
+.editForm input:focus,
+.editForm textarea:focus {
+  border: 1px solid var(--brandColor);
+}
+
+@media screen and (width <= 720px) {
+  .editPanel{
+    width: 80%;
+  }
+}

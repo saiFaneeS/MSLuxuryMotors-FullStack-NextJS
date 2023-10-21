@@ -1,0 +1,51 @@
+.main {
+  height: 100%;
+  padding: 2em 12%;
+}
+
+.title {
+  color: #222;
+  font-weight: 700;
+  margin-bottom: 1em;
+  position: relative;
+  overflow: hidden;
+}
+
+.title::after{
+  content: "";
+  background-color: #aaa;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 8.5em;
+}
+
+.desc {
+  color: #555;
+  margin-bottom: 2em;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em 1em;
+}
+
+@media screen and (width <= 400px) {
+  .title::after {
+    display: none;
+  }
+}
+
+@media screen and (width <= 1440px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (width <= 776px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
