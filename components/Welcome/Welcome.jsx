@@ -3,6 +3,7 @@ import styles from "./welcome.module.css";
 import Link from "next/link";
 import { East } from "@mui/icons-material";
 import FromLeft from "../Animations/FromLeft";
+import Image from "next/image";
 
 const Welcome = () => {
   return (
@@ -18,7 +19,7 @@ const Welcome = () => {
               Welcome to MS Luxury Motors, where our fleet of luxurious
               limousines stands ready to redefine your concept of premium
               chauffeur service. We specialize in making every moment
-              extraordinary. Whether it's a special celebration, an important
+              extraordinary. Whether its a special celebration, an important
               event, or simply a desire for elegance, our signature limousines
               are here to elevate your journey into an unforgettable experience.
               Your exceptional ride begins here.
@@ -31,7 +32,7 @@ const Welcome = () => {
         </FromLeft>
           </div>
           <div className={styles.right}>
-            <img
+            <Image
               src={"/collage/chauufeur.jpg"}
               alt=""
               height="700"

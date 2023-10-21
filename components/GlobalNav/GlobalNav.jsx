@@ -12,10 +12,10 @@ const GlobalNav = () => {
     <div className={styles.main}>
       <div className={styles.contactInfo}>
         <p>
-          <IoIosCall /> <a href="tel:0123456789">0123456789</a>
+          <IoIosCall /> <Link href="tel:0123456789">0123456789</Link>
         </p>
         <p>
-          <IoMdMail /> <a href="/">msluxurymotors@gmail.com</a>
+          <IoMdMail /> <Link href="/">msluxurymotors@gmail.com</Link>
         </p>
       </div>
       <div className={styles.socials}>

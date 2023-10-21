@@ -17,8 +17,8 @@ const About = () => {
           efficiency. Our primary mission is to redefine luxury transportation,
           ensuring that every journey with us is marked by seamless comfort and
           elegance. From the moment you step into one of our premium vehicles,
-          you'll experience a level of service that sets a new standard for the
-          industry. It's not just transportation; it's a journey tailored to
+          youll experience a level of service that sets a new standard for the
+          industry. Its not just transportation; its a journey tailored to
           your desires, characterized by attention to detail and dedication to
           excellence.
         </p>
@@ -42,7 +42,7 @@ const About = () => {
             <p>
               Our chauffeurs are not just drivers; they are seasoned
               professionals devoted to your safety and comfort. With their
-              experience and commitment to courtesy, you'll always feel in good
+              experience and commitment to courtesy, youll always feel in good
               hands
             </p>
           </div>
@@ -64,7 +64,7 @@ const About = () => {
             <p>
               Our chauffeurs are not just drivers; they are seasoned
               professionals devoted to your safety and comfort. With their
-              experience and commitment to courtesy, you'll always feel in good
+              experience and commitment to courtesy, youll always feel in good
               hands
             </p>
           </div>

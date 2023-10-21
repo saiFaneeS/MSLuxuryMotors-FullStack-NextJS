@@ -40,7 +40,7 @@ const Contact = () => {
           <h2>ARE YOU READY?</h2>
         </FadeIn>
         <FadeIn2>
-          <h2>LET'S CONNECT.</h2>
+          <h2>LETS CONNECT.</h2>
         </FadeIn2>
       </div>
       <FadeIn2>

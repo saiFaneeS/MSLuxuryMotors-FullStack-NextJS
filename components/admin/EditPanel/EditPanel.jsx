@@ -36,7 +36,7 @@ const EditPanel = ({ setEditPanel, id, item }) => {
     <>
       <div className={styles.editPanel}>
         <div className={styles.titleBar}>
-          <h2 className={styles.title}>Edit '{item.carName}'</h2>
+          <h2 className={styles.title}>Edit {item.carName}</h2>
           <Close
             onClick={() => setEditPanel(false)}
             sx={{ cursor: "pointer", color: "#aaa", fontSize: "2em" }}
