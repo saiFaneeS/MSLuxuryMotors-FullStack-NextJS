@@ -24,7 +24,7 @@ const Home = () => {
               <h2 className={styles.title}>Dashboard</h2>
               <div className={styles.userInfo}>
                 <div className={styles.text}>
-                  Welcome to the Dashboard! Manage your website's posts, add new
+                  Welcome to the Dashboard! Manage your websites posts, add new
                   ones, edit existing ones, or remove them as needed.
                 </div>
               </div>
