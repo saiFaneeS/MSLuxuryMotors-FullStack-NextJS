@@ -18,10 +18,9 @@ const Posts = () => {
       console.log(err);
     }
   };
-  
+
   useEffect(() => {
     handleGetAllPosts();
-    console.log(posts.docs)
   }, []);
 
   const handleRefresh = (eventId) => {
@@ -49,7 +48,7 @@ const Posts = () => {
               );
             })
           ) : (
-            <Box sx={{textAlign: "center"}}>No Posts Yet.</Box>
+            <Box sx={{ textAlign: "center" }}>No Posts Yet.</Box>
           )}
         </div>
       </div>

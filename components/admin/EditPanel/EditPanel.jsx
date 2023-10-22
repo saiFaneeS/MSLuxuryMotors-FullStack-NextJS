@@ -5,14 +5,13 @@ import { Close } from "@mui/icons-material";
 import { useFirebase } from "@/context/firebase";
 import { useNotification } from "@/context/notificationContext";
 
-const EditPanel = ({ setEditPanel, id, item }) => {
+const EditPanel = ({ setEditPanel, id, item, imageUrl }) => {
   const [newItem, setNewItem] = useState(item);
   const {
     carName,
     perDay,
     perMonth,
     description,
-    // imageUrl
   } = newItem;
 
   const firebase = useFirebase();
@@ -27,7 +26,7 @@ const EditPanel = ({ setEditPanel, id, item }) => {
         perDay,
         perMonth,
         description,
-        // imageUrl,
+        imageUrl,
       });
       item.fetchUpdatedData();
       setEditPanel(false);

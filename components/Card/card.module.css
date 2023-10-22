@@ -89,37 +89,13 @@
 .imgAlt::before {
   content: "";
   background-color: #fff;
-  filter: blur(40px);
+  filter: blur(50px);
   width: 20em;
-  height: 1em;
+  height: 2em;
   position: absolute;
   top: 50%;
   rotate: -45deg;
-  animation: shine 1s infinite;
-}
-
-.imgAlt::after {
-  content: "";
-  background-color: #fff;
-  filter: blur(40px);
-  width: 20em;
-  height: 1em;
-  position: absolute;
-  top: 50%;
-  rotate: -45deg;
-  animation: shine2 1s infinite;
-}
-
-.imgAlt::after {
-  content: "";
-  background-color: #fff;
-  filter: blur(40px);
-  width: 20em;
-  height: 1em;
-  position: absolute;
-  top: 50%;
-  rotate: -45deg;
-  animation: shine4 1s infinite;
+  animation: shine 1.5s infinite ;
 }
 
 @keyframes shine {
@@ -131,30 +107,6 @@
   }
   100% {
     left: 100%;
-  }
-}
-
-@keyframes shine2 {
-  0% {
-    left: -150%;
-  }
-  50% {
-    left: -150%;
-  }
-  100% {
-    left: 150%;
-  }
-}
-
-@keyframes shine3 {
-  0% {
-    left: -200%;
-  }
-  50% {
-    left: -200%;
-  }
-  100% {
-    left: 200%;
   }
 }
 

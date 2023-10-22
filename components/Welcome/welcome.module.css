@@ -12,22 +12,7 @@
   flex-basis: 50%;
   text-align: left;
   position: relative;
-  animation: content 1s ease;
 }
-
-/* @keyframes content {
-  0% {
-    left: -100%;
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    left: 0;
-    opacity: 100%;
-  }
-} */
 
 .main .right {
   flex: 50%;
@@ -37,6 +22,7 @@
 }
 
 .main .right img {
+  border-radius: 0.5em;
   object-fit: cover;
   height: 100%;
   width: 100%;

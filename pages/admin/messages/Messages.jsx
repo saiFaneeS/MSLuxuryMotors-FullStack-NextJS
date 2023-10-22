@@ -24,7 +24,7 @@ const Messages = () => {
     } catch (err) {
       console.log(err);
     }
-  }, [handleRefresh]);
+  }, []);
 
   return (
     <>

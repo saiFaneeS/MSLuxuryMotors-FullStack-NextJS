@@ -16,12 +16,6 @@ const CreateOffer = (props) => {
   const firebase = useFirebase();
   const notification = useNotification();
 
-  useEffect(() => {
-    if (carImage) {
-      setImageUrl(URL.createObjectURL(carImage));
-    }
-  }, [carImage]);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -32,22 +26,34 @@ const CreateOffer = (props) => {
         description,
         carImage
       );
-      props.fetchUpdatedData();
     } catch (err) {
       console.log(err);
       // notification.error("");
+    }
+    if (props.fetchUpdatedData) {
+      props.fetchUpdatedData(); // Call the callback function from the parent
     }
     setCarName("");
     setPerDay("");
     setPerMonth("");
     setDescription("");
-    setCarImage(null)
+    setCarImage(null);
     const form = document.getElementById("createForm");
     if (form) {
       form.reset();
-    } 
+    }
     notification.success("Post Successfully Added");
   };
+
+  useEffect(() => {
+    if (carImage) {
+      setImageUrl(URL.createObjectURL(carImage));
+    }
+  }, [carImage]);
+
+  // useEffect(() => {
+  //   props.fetchUpdatedData();
+  // }, [handleSubmit]);
 
   return (
     <div className={styles.main}>
@@ -96,17 +102,12 @@ const CreateOffer = (props) => {
             </Button>
           </label>
           {imageUrl && carImage && (
-            <Box mt={2} textAlign="center">
+            <Box mt={2} textAlign="center" sx={{display:"flex", justifyContent:"center", alignItems:"center", flexDirection:"column"}}>
               <div style={{ marginBottom: "10px", letterSpacing: "1px" }}>
                 PREVIEW
               </div>
               <div className={styles.preview}>
-              <Image
-                src={imageUrl}
-                alt={""}
-                height="200"
-                width="300"
-              />
+                <Image src={imageUrl} alt={""} height="200" width="300" />
               </div>
             </Box>
           )}
@@ -123,14 +124,6 @@ const CreateOffer = (props) => {
           >
             ADD POST
           </Button>
-          {/* <Button
-            variant="contained"
-            color="primary"
-            type="submit"
-            disabled={itemsLength >= 3 ? true : false}
-          >
-            ADD OFFER ({itemsLength}/3)
-          </Button> */}
         </form>
       </>
     </div>

@@ -23,7 +23,9 @@ const PostCard = (props) => {
     try {
       await firebase.deletePost(props.id);
       notification.success("Post Deleted");
-      props.handleGetAllPosts();
+        if (props.fetchUpdatedData) {
+          props.fetchUpdatedData(); 
+        }
     } catch (error) {
       console.error("Error deleting item:", error);
       //return notification.error("");
@@ -33,7 +35,12 @@ const PostCard = (props) => {
   return (
     <Box className={styles.main}>
       {editPanel && (
-        <EditPanel setEditPanel={setEditPanel} item={props} id={props.id} />
+        <EditPanel
+          setEditPanel={setEditPanel}
+          item={props}
+          imageUrl={props.imageUrl}
+          id={props.id}
+        />
       )}
       <div className={styles.container}>
         <div className={styles.img}>
@@ -52,10 +59,12 @@ const PostCard = (props) => {
         <div className={styles.info}>
           <h3 className={styles.postTitle}>{props.carName}</h3>
           <p className={styles.price} style={{ margin: "1em 0" }}>
-          AED {props.perDay}<span> / Hour</span>
+            AED {props.perDay}
+            <span> / Hour</span>
           </p>
           <p className={styles.price}>
-          AED {props.perMonth}<span> / Day</span>
+            AED {props.perMonth}
+            <span> / Day</span>
           </p>
         </div>
       </div>

@@ -36,12 +36,16 @@ const Contact = () => {
   return (
     <div className={styles.main}>
       <div className={styles.titleBar}>
+          <h2>
         <FadeIn>
-          <h2>ARE YOU READY?</h2>
+            ARE YOU READY?
         </FadeIn>
+            </h2>
+          <h2>
         <FadeIn2>
-          <h2>LETS CONNECT.</h2>
+            LETS CONNECT.
         </FadeIn2>
+            </h2>
       </div>
       <FadeIn2>
         <p className={styles.desc}>
@@ -63,7 +67,7 @@ const Contact = () => {
           <FromBottom>
             <h2 className={styles.contact}>Contact Us</h2>
             <form>
-              <div className={styles.firstI}>
+              <div >
                 <label>Your Name*</label>
                 <input
                   type="text"
@@ -71,7 +75,7 @@ const Contact = () => {
                   onChange={(e) => setName(e.target.value)}
                 />
               </div>
-              <div className={styles.secI}>
+              <div >
                 <label>Your Email*</label>
                 <input
                   type="email"
@@ -79,7 +83,7 @@ const Contact = () => {
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
-              <div className={styles.thirdI}>
+              <div >
                 <label>Phone*</label>
                 <input
                   type="number"

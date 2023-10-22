@@ -3,9 +3,9 @@
 }
 
 .columns {
-  padding: 2.5em 12%;
+  padding: 2em 12%;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;  
   justify-content: space-between;
   align-items: flex-start;
   gap: 2em;
@@ -45,7 +45,7 @@
 }
 
 .col2 a {
-  font-weight: 700;
+  font-weight: 500;
   transition: 0.3s;
 }
 
@@ -59,20 +59,20 @@
 
 .logo {
   width: fit-content;
-  margin-bottom: 2em;
   text-align: left;
 }
 
 .logo h1 {
   font-weight: 700;
-  font-size: 2em;
-  color: var(--darkerBrandColor);
+  font-size: 1.7em;
+  color: var(--brandColor);
 }
 
 .logo p {
-  letter-spacing: 14px;
+  text-align: center;
+  letter-spacing: 4px;
   text-wrap: nowrap;
-  color: var(--darkerBrandColor);
+  color: var(--brandColor);
 }
 
 .col3 .info {
@@ -96,6 +96,7 @@
     gap: 1em;
   }
   .logo p {
-    letter-spacing: 13px;
+    text-align: left;
+    letter-spacing: 1px;
   }
 }

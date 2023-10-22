@@ -2,10 +2,8 @@ import React, { useEffect } from "react";
 import Dashboard from "./dashboard";
 import { Montserrat } from "next/font/google";
 import { useFirebase } from "@/context/firebase";
-import { useRouter } from "next/router";
 import Layout from "./Layout";
 import styles from "./Home.module.css";
-import Login from "./login/Login";
 import Profile from "./profile";
 
 const montserrat = Montserrat({

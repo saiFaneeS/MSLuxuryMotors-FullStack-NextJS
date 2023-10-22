@@ -7,7 +7,7 @@
   padding: 4em 0;
   padding-left: 12%;
   background-color: #111;
-  margin-bottom: 6em;
+  padding-bottom: 6em;
   color: #fff;
   overflow: hidden;
 }
@@ -15,6 +15,7 @@
 .col1 {
   flex-basis: 30%;
   padding-right: 1em;
+  /* overflow: hidden; */
 }
 
 .col2 {
@@ -23,22 +24,6 @@
   gap: 1em;
   position: relative;
   filter: opacity(1);
-  animation: panels 1s ease;
-}
-
-@keyframes panels {
-  0% {
-    right: -100%;
-    gap: -4em;
-    filter: opacity(0);
-  }
-  50% {
-    filter: opacity(0);
-  }
-  100% {
-    right: 0;
-    filter: opacity(1);
-  }
 }
 
 .title {
@@ -54,22 +39,6 @@
   margin: 4em 0;
   line-height: 2em;
 }
-
-/* .cta {
-  font-size: 1em;
-  padding: 0.4em 2em;
-  color: #fff;
-  border-radius: 2px;
-  background-color: var(--brandColor);
-  border: 1px solid var(--brandColor);
-  position: relative;
-  z-index: 10;
-}
-
-.cta:hover {
-  color: var(--brandColor);
-  background-color: transparent;
-} */
 
 .panel {
   width: 33%;

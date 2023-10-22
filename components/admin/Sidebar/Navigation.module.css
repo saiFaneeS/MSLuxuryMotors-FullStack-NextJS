@@ -1,18 +1,18 @@
 .main {
+  width: 100%;
+  padding: 1em 12%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 12%;
+  gap: 1em;
   position: fixed;
   top: 0;
   z-index: 100;
-  width: 100%;
-  border-bottom: 1px solid #ddd;
   color: #fff;
   background: rgba(0, 0, 0, 0.834);
+  border-bottom: 1px solid #ddd;
   backdrop-filter: blur(5.9px);
-  gap: 1em;
-  -webkit-backdrop-filter: blur(5.9px); 
+  -webkit-backdrop-filter: blur(5.9px);
 }
 
 .logo {
@@ -45,13 +45,13 @@
 }
 
 @media screen and (width <= 590px) {
-  .main {
-    flex-wrap: wrap;
-  }
   .logo span {
     display: none;
   }
   .links p {
+    display: none;
+  }
+  .status p {
     display: none;
   }
 }

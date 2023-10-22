@@ -92,7 +92,10 @@ export const FirebaseProvider = (props) => {
     carImage
   ) => {
     // img upload
-    const imageRef = ref(storage, `public/carImages/${Date.now()}-${carImage.name}`);
+    const imageRef = ref(
+      storage,
+      `public/carImages/${Date.now()}-${carImage.name}`
+    );
     const uploadResult = await uploadBytes(imageRef, carImage);
     // info upload
     try {
@@ -112,6 +115,22 @@ export const FirebaseProvider = (props) => {
   const getAllPosts = async () => {
     try {
       return getDocs(collection(db, "posts"));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const getPostById = async () => {
+    try {
+      const ref = doc(db, "posts", id);
+      const docSnap = await getDoc(ref);
+      if (docSnap.exists()) {
+        const post = docSnap.data();
+        // Use a City instance method
+        console.log(city.toString());
+      } else {
+        console.log("No such document!");
+      }
     } catch (err) {
       console.log(err);
     }
@@ -141,19 +160,16 @@ export const FirebaseProvider = (props) => {
     id,
   }) => {
     // img update
-    // const imageRef = ref(
-    //   storage,
-    //   `public/carImages/${Date.now()}-${imageUrl.carName}`
-    // );
+    const imageRef = ref(storage, imageUrl);
     try {
-      // const uploadResult = await uploadBytes(imageRef, imageUrl);
+      const uploadResult = await uploadBytes(imageRef, imageUrl);
       // info update
       await setDoc(doc(db, "posts", id), {
         carName,
         perDay,
         perMonth,
         description,
-        // imageUrl: uploadResult.ref.fullPath,
+        imageUrl: uploadResult.ref.fullPath,
       });
     } catch (err) {
       console.log(err);
@@ -199,6 +215,7 @@ export const FirebaseProvider = (props) => {
         loginUserWithEmailAndPassword,
         handleCreateNewPost,
         getAllPosts,
+        getPostById,
         getImageUrl,
         deletePost,
         editPost,

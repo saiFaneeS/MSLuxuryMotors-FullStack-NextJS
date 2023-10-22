@@ -12,41 +12,18 @@
 .titleBar h2:first-child {
   font-weight: 800;
   letter-spacing: 1px;
-  /* animation: title1 1s; */
-}
-
-@keyframes title1 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100%;
-  }
+  font-weight: 800;
 }
 
 .titleBar h2:last-child {
   font-weight: 500;
   letter-spacing: 3px;
-  /* animation: title2 2s; */
-}
-
-@keyframes title2 {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100%;
-  }
 }
 
 .desc {
   color: #aaa;
   text-align: center;
   margin-bottom: 6em;
-  /* animation: title2 3s; */
 }
 
 .columns {
@@ -92,18 +69,8 @@
 }
 
 .rightCol .contact {
-  /* animation: contact 1s; */
   position: relative;
   text-align: left;
-}
-
-@keyframes contact {
-  0% {
-    right: -100%;
-  }
-  100% {
-    right: 0;
-  }
 }
 
 .rightCol h2 {
@@ -132,8 +99,6 @@
   font-family: sans-serif;
 }
 
-
-
 .rightCol textarea {
   height: 5em;
 }
@@ -144,57 +109,4 @@
   align-items: center;
   gap: 0.5em;
   width: 100%;
-}
-
-.firstI {
-  /* animation: first 1s; */
-  position: relative;
-}
-
-@keyframes first {
-  0% {
-    right: -100%;
-  }
-  100% {
-    right: 0;
-  }
-}
-.secI {
-  /* animation: second 1s; */
-  position: relative;
-}
-
-@keyframes second {
-  0% {
-    right: -120%;
-  }
-  100% {
-    right: 0;
-  }
-}
-.thirdI {
-  /* animation: third 1s; */
-  position: relative;
-}
-
-@keyframes third {
-  0% {
-    right: -140%;
-  }
-  100% {
-    right: 0;
-  }
-}
-.fourthI {
-  /* animation: fourth 1s; */
-  position: relative;
-}
-
-@keyframes fourth {
-  0% {
-    right: -160%;
-  }
-  100% {
-    right: 0;
-  }
 }
