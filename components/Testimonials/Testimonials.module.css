@@ -34,6 +34,7 @@
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-padding: 2em;
+  scroll-behavior: smooth;
 }
 
 .innerCarousel::-webkit-scrollbar {
