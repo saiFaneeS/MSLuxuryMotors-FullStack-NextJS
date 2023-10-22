@@ -5,6 +5,7 @@ import { useFirebase } from "@/context/firebase";
 import { Button } from "@mui/material";
 import { CallOutlined } from "@mui/icons-material";
 import Link from "next/link";
+import Reveal from "../Animations/FromBottom";
 
 const Card = ({ carName, perDay, perMonth, description, imageUrl }) => {
   const [url, setUrl] = useState(null);
@@ -21,17 +22,17 @@ const Card = ({ carName, perDay, perMonth, description, imageUrl }) => {
 
   const handleWhatsAppRedirect = () => {
     const phoneNumber = "03183886011";
-  const message = `Hello! I am interested in booking this *${carName}*. \nPer Hour: AED ${perDay}, \nPer Day: AED ${perMonth}.`;
+    const message = `Hello! I am interested in booking this *${carName}*. \nPer Hour: AED ${perDay}, \nPer Day: AED ${perMonth}.`;
 
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
     )}`;
 
-    window.location.href = url;
+    window.open(url, "_blank");
   };
 
   return (
-    <div>
+    <Reveal>
       <div className={styles.card}>
         <div className={styles.cardImage}>
           {url ? (
@@ -82,24 +83,24 @@ const Card = ({ carName, perDay, perMonth, description, imageUrl }) => {
                   </Button>
                 </Link>
                 {/* <Link href="/"> */}
-                <Button
-                  variant="contained"
-                  sx={[
-                    {
-                      color: "#fff",
-                      backgroundColor: "#333",
-                      transition: "0.2s",
-                    },
-                    {
-                      "&:hover": {
-                        backgroundColor: "var(--darkerBrandColor)",
+                  <Button
+                    onClick={handleWhatsAppRedirect}
+                    variant="contained"
+                    sx={[
+                      {
+                        color: "#fff",
+                        backgroundColor: "#333",
+                        transition: "0.2s",
                       },
-                    },
-                  ]}
-                  onClick={handleWhatsAppRedirect}
-                >
-                  Book This Car
-                </Button>
+                      {
+                        "&:hover": {
+                          backgroundColor: "var(--darkerBrandColor)",
+                        },
+                      },
+                    ]}
+                  >
+                    Book This Car
+                  </Button>
                 {/* </Link> */}
               </>
             </div>
@@ -112,7 +113,7 @@ const Card = ({ carName, perDay, perMonth, description, imageUrl }) => {
           </div>
         )}
       </div>
-    </div>
+    </Reveal>
   );
 };
 

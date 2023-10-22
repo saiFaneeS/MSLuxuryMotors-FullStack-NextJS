@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./about.module.css";
 import { TbMoneybag } from "react-icons/tb";
 import { VscVerified } from "react-icons/vsc";
-import { BsPhone } from "react-icons/bs";
 import { BsLightningCharge } from "react-icons/bs";
 import Reveal from "../Animations/FromBottom";
 
@@ -11,20 +10,23 @@ const About = () => {
     <div className={styles.main}>
       <div className={styles.panel1}>
         <h2>At Modern Standard Luxury Motors,</h2>
-        <p>
-          What We Do at MS Luxury Motors At MS Luxury Motors, we specialize in
-          delivering top-tier chauffeur services that combine opulence with
-          efficiency. Our primary mission is to redefine luxury transportation,
-          ensuring that every journey with us is marked by seamless comfort and
-          elegance. From the moment you step into one of our premium vehicles,
-          youll experience a level of service that sets a new standard for the
-          industry. Its not just transportation; its a journey tailored to
-          your desires, characterized by attention to detail and dedication to
-          excellence.
-        </p>
+        <Reveal>
+          <p>
+            What We Do at MS Luxury Motors At MS Luxury Motors, we specialize in
+            delivering top-tier chauffeur services that combine opulence with
+            efficiency. Our primary mission is to redefine luxury
+            transportation, ensuring that every journey with us is marked by
+            seamless comfort and elegance. From the moment you step into one of
+            our premium vehicles, youll experience a level of service that sets
+            a new standard for the industry. Its not just transportation; its a
+            journey tailored to your desires, characterized by attention to
+            detail and dedication to excellence.
+          </p>
+        </Reveal>
       </div>
-      <Reveal>
-        <div className={styles.panel2}>
+
+      <div className={styles.panel2}>
+        <Reveal>
           <div className={styles.item}>
             <h3>
               <TbMoneybag /> Affordibility
@@ -35,6 +37,8 @@ const About = () => {
               exceeding your budget.
             </p>
           </div>
+        </Reveal>
+        <Reveal>
           <div className={styles.item}>
             <h3>
               <VscVerified /> Professional Drivers
@@ -46,6 +50,8 @@ const About = () => {
               hands
             </p>
           </div>
+        </Reveal>
+        <Reveal>
           <div className={styles.item}>
             <h3>
               <BsLightningCharge /> Easy Booking
@@ -57,6 +63,8 @@ const About = () => {
               preferences.
             </p>
           </div>
+        </Reveal>
+        <Reveal>
           <div className={styles.item}>
             <h3>
               <VscVerified /> Professional Drivers
@@ -68,8 +76,8 @@ const About = () => {
               hands
             </p>
           </div>
-        </div>
-      </Reveal>
+        </Reveal>
+      </div>
     </div>
   );
 };

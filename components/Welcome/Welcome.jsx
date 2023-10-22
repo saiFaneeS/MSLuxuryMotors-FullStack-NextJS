@@ -9,12 +9,16 @@ const Welcome = () => {
   return (
     <>
       <div className={`${styles.main}`}>
-          <div className={styles.left}>
-        <FromBottom>
+        <div className={styles.left}>
+          <FromBottom>
             <p className={styles.smText}>WELCOME TO</p>
+          </FromBottom>
+          <FromBottom>
             <h1 className={styles.lgText}>
               LUXURY LIMOUSINE CHAUFFEUR SERVICE IN DUBAI
             </h1>
+          </FromBottom>
+          <FromBottom>
             <p className={styles.desc}>
               Welcome to MS Luxury Motors, where our fleet of luxurious
               limousines stands ready to redefine your concept of premium
@@ -24,21 +28,23 @@ const Welcome = () => {
               are here to elevate your journey into an unforgettable experience.
               Your exceptional ride begins here.
             </p>
+          </FromBottom>
+          <FromBottom>
             <Link href="/vehicles">
               <button className={styles.cta}>
                 OUR FLEET <East />
               </button>
             </Link>
-        </FromBottom>
-          </div>
-          <div className={styles.right}>
-            <Image
-              src={"/collage/chauufeur.jpg"}
-              alt=""
-              height="700"
-              width="1000"
-            />
-          </div>
+          </FromBottom>
+        </div>
+        <div className={styles.right}>
+          <Image
+            src={"/collage/chauufeur.jpg"}
+            alt=""
+            height="700"
+            width="1000"
+          />
+        </div>
       </div>
     </>
   );

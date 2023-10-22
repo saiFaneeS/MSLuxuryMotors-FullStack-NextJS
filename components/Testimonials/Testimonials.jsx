@@ -1,6 +1,6 @@
 import styles from "./Testimonials.module.css";
 import SingleCard from "./SingleCard";
-import Reveal from "../Animations/FromRight";
+// import Reveal from "../Animations/FromRight";
 
 const Testimonials = () => {
   return (
@@ -10,17 +10,17 @@ const Testimonials = () => {
         <p>What our satisfied customers say</p>
       </div>
       <div className={styles.carousel}>
-        <Reveal>
-          <div className={styles.innerCarousel}>
-            <SingleCard />
-            <SingleCard />
-            <SingleCard />
-            <SingleCard />
-            <SingleCard />
-            <SingleCard />
-            <SingleCard />
-          </div>
-        </Reveal>
+        {/* <Reveal> */}
+        <div className={styles.innerCarousel}>
+          <SingleCard />
+          <SingleCard />
+          <SingleCard />
+          <SingleCard />
+          <SingleCard />
+          <SingleCard />
+          <SingleCard />
+        </div>
+        {/* </Reveal> */}
       </div>
     </div>
   );

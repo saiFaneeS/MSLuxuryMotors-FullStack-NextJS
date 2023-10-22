@@ -160,16 +160,16 @@ export const FirebaseProvider = (props) => {
     id,
   }) => {
     // img update
-    const imageRef = ref(storage, imageUrl);
+    // const imageRef = ref(storage, imageUrl);
     try {
-      const uploadResult = await uploadBytes(imageRef, imageUrl);
+      // const uploadResult = await uploadBytes(imageRef, imageUrl);
       // info update
       await setDoc(doc(db, "posts", id), {
         carName,
         perDay,
         perMonth,
         description,
-        imageUrl: uploadResult.ref.fullPath,
+        imageUrl,
       });
     } catch (err) {
       console.log(err);

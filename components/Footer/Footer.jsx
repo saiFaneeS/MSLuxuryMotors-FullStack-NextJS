@@ -1,5 +1,5 @@
 import React from "react";
-import styles from ".//footer.module.css";
+import styles from "./footer.module.css";
 import { BsInstagram } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 import { BsWhatsapp } from "react-icons/bs";
@@ -8,6 +8,17 @@ import { IoMdMail } from "react-icons/io";
 import Link from "next/link";
 
 const Footer = () => {
+  const handleWhatsAppRedirect = () => {
+    const phoneNumber = "03183886011";
+    const message = `Hello! I am interested in booking a Limousine Service.`;
+
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    window.open(url, "_blank");
+  };
+
   return (
     <div className={styles.main}>
       <div className={styles.columns}>
@@ -22,7 +33,7 @@ const Footer = () => {
             <Link target="_blank" href="https://www.facebook.com/saifizance">
               <BsFacebook />
             </Link>
-            <BsWhatsapp />
+            <BsWhatsapp onClick={handleWhatsAppRedirect} />
           </div>
           <div className={styles.contactInfo}>
             <a href="tel:0123456789">
@@ -49,21 +60,16 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.col3}>
-          <div className={styles.logo}>
+          <Link href="/" className={styles.logo}>
             <h1>Modern Standards</h1>
             <p>Luxury Motors</p>
-          </div>
-          {/* <p className={styles.info}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-            veritatis tenetur minus impedit ducimus eveniet fuga voluptatum
-            voluptate tempora ut?
-          </p> */}
+          </Link>
         </div>
       </div>
 
       <div className={styles.footerLinks}>
         <Link href="/terms-conditions">Terms & Conditions</Link>
-        <p>Developed By Saif Anees</p>
+        <p style={{fontWeight: "600"}}>Developed By Saif Anees</p>
         <Link href="/privacy-policy">Privacy & Policy</Link>
       </div>
     </div>

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styles from "./AllFleet.module.css";
 import { useFirebase } from "@/context/firebase";
 import Card from "../Card/Card";
-import Reveal from "../Animations/FromBottom";
 
 const AllFleet = () => {
   const firebase = useFirebase();
@@ -21,7 +20,6 @@ const AllFleet = () => {
         explore our curated selection of vehicles designed to exceed your
         expectations.
       </p>
-      <Reveal>
         <div className={styles.cards}>
           {posts.length === 0 ? (
             <>
@@ -35,7 +33,6 @@ const AllFleet = () => {
             })
           )}
         </div>
-      </Reveal>
     </div>
   );
 };

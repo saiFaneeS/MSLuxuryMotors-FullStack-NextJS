@@ -8,6 +8,17 @@ import Link from "next/link";
 import styles from "./globalNav.module.css";
 
 const GlobalNav = () => {
+  const handleWhatsAppRedirect = () => {
+    const phoneNumber = "03183886011";
+    const message = `Hello! I am interested in booking a Limousine Service.`;
+
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    window.open(url, "_blank");
+  };
+  
   return (
     <div className={styles.main}>
       <div className={styles.contactInfo}>
@@ -34,7 +45,7 @@ const GlobalNav = () => {
         <Link target="_blank" href="https://www.facebook.com/saifizance">
           <BsFacebook />
         </Link>
-        <Link href="/">
+        <Link href="" onClick={handleWhatsAppRedirect}>
           <BsWhatsapp />
         </Link>
       </div>

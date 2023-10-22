@@ -22,21 +22,18 @@
 }
 
 .carousel {
-  /* border: 1px solid blue; */
   cursor: grab;
   overflow: hidden;
 }
 
 .innerCarousel {
-  /* border: 1px solid red; */
-  padding: 1em 8% 2em 8%;
+  padding: 1em 12% 2em 12%;
   display: grid;
   grid-auto-flow: column;
-  gap: 2em;
+  gap: 3em;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-padding: 2em;
-  /* grid-auto-columns: 22%; */
 }
 
 .innerCarousel::-webkit-scrollbar {
@@ -49,7 +46,7 @@
 
 .innerCarousel::-webkit-scrollbar-thumb {
   background-color: #444;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 .item {
@@ -95,7 +92,7 @@
   font-size: 4em;
 }
 
-@media screen and (width <= 360px){
+@media screen and (width <= 360px) {
   .item {
     width: 16em;
   }

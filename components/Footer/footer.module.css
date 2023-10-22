@@ -5,7 +5,7 @@
 .columns {
   padding: 2em 12%;
   display: flex;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   gap: 2em;
@@ -45,16 +45,11 @@
 }
 
 .col2 a {
-  font-weight: 500;
   transition: 0.3s;
 }
 
 .col2 a:hover {
   color: var(--brandColor);
-}
-
-.col3 {
-  width: 22em;
 }
 
 .logo {
@@ -69,7 +64,7 @@
 }
 
 .logo p {
-  text-align: center;
+  text-align: left;
   letter-spacing: 4px;
   text-wrap: nowrap;
   color: var(--brandColor);
@@ -84,19 +79,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1em;
   height: min-content;
   color: #444;
   overflow: hidden;
   padding: 2em 12%;
 }
 
-@media screen and (width <= 460px) {
+@media screen and (width <= 852px) {
   .col2 {
     flex-direction: column;
     gap: 1em;
-  }
-  .logo p {
-    text-align: left;
-    letter-spacing: 1px;
   }
 }

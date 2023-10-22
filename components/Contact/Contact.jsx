@@ -36,16 +36,12 @@ const Contact = () => {
   return (
     <div className={styles.main}>
       <div className={styles.titleBar}>
-          <h2>
-        <FadeIn>
-            ARE YOU READY?
-        </FadeIn>
-            </h2>
-          <h2>
-        <FadeIn2>
-            LETS CONNECT.
-        </FadeIn2>
-            </h2>
+        <h2>
+          <FadeIn>ARE YOU READY?</FadeIn>
+        </h2>
+        <h2>
+          <FadeIn2>LETS CONNECT.</FadeIn2>
+        </h2>
       </div>
       <FadeIn2>
         <p className={styles.desc}>
@@ -54,20 +50,22 @@ const Contact = () => {
       </FadeIn2>
       <div className={styles.columns}>
         <div className={styles.leftCol}>
-          <div className={styles.image}>
-            <Image
-              src="/collage/limo1.jpg"
-              height="1000"
-              width="1000"
-              alt="..."
-            />
-          </div>
+            <div className={styles.image}>
+              <Image
+                src="/collage/limo1.jpg"
+                height="1000"
+                width="1000"
+                alt="..."
+              />
+            </div>
         </div>
         <div className={styles.rightCol}>
           <FromBottom>
             <h2 className={styles.contact}>Contact Us</h2>
-            <form>
-              <div >
+          </FromBottom>
+          <form>
+            <FromBottom>
+              <div>
                 <label>Your Name*</label>
                 <input
                   type="text"
@@ -75,7 +73,9 @@ const Contact = () => {
                   onChange={(e) => setName(e.target.value)}
                 />
               </div>
-              <div >
+            </FromBottom>
+            <FromBottom>
+              <div>
                 <label>Your Email*</label>
                 <input
                   type="email"
@@ -83,7 +83,9 @@ const Contact = () => {
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
-              <div >
+            </FromBottom>
+            <FromBottom>
+              <div>
                 <label>Phone*</label>
                 <input
                   type="number"
@@ -91,7 +93,9 @@ const Contact = () => {
                   onChange={(e) => setPhone(e.target.value)}
                 />
               </div>
-              <div className={styles.fourthI}>
+            </FromBottom>
+            <FromBottom>
+              <div>
                 <label>Message*</label>
                 <textarea
                   type="text"
@@ -99,6 +103,8 @@ const Contact = () => {
                   onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
               </div>
+            </FromBottom>
+            <FromBottom>
               <Button
                 variant="contained"
                 onClick={handleSendMessage}
@@ -107,8 +113,8 @@ const Contact = () => {
                 Send Message
                 <AiOutlineSend />
               </Button>
-            </form>
-          </FromBottom>
+            </FromBottom>
+          </form>
         </div>
       </div>
     </div>
