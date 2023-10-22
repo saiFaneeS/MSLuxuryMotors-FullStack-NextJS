@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.png" />
-        <style>{`.montserrat { font-family: ${montserrat.fontFamily ? montserrat.fontFamily : "sans-serif"}; }`}</style>
+        <style>{`.montserrat { font-family: ${montserrat.fontFamily}; }`}</style>
       </Head>
       <div className="montserrat" style={{overflow:"hidden"}}>
         <GlobalNav />

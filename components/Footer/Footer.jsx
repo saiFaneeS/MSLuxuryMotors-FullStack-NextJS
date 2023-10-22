@@ -63,6 +63,7 @@ const Footer = () => {
 
       <div className={styles.footerLinks}>
         <Link href="/terms-conditions">Terms & Conditions</Link>
+        <p>Developed By Saif Anees</p>
         <Link href="/privacy-policy">Privacy & Policy</Link>
       </div>
     </div>

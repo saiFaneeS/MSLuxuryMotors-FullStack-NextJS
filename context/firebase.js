@@ -17,20 +17,33 @@ import {
   setDoc,
 } from "firebase/firestore";
 import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
+import { useNotification } from "./notificationContext";
 
 const FirebaseContext = createContext(null);
 
+// 1st Firebase Key
 const firebaseConfig = {
-  apiKey: "AIzaSyBugJ55y-YN2Hv69J5FRh_76ptBiaXIq2o",
-  authDomain: "mslm-f5216.firebaseapp.com",
-  projectId: "mslm-f5216",
-  storageBucket: "mslm-f5216.appspot.com",
-  messagingSenderId: "749641810921",
-  appId: "1:749641810921:web:7439f0d42dfbc7ff498178",
-  measurementId: "G-W1DTBVH0BP",
+  apiKey: "AIzaSyBmxn-bP_G5DAiEE5RdW4dqzLCuiemGz0g",
+  authDomain: "msluxurymotors.firebaseapp.com",
+  projectId: "msluxurymotors",
+  storageBucket: "msluxurymotors.appspot.com",
+  messagingSenderId: "390071557758",
+  appId: "1:390071557758:web:f5b065e739263cda61422f",
+  measurementId: "G-KNB6TZ3DE3",
 };
 
-  export const useFirebase = () => useContext(FirebaseContext);
+// 2nd Firebase Key
+// const firebaseConfig = {
+//   apiKey: "AIzaSyBugJ55y-YN2Hv69J5FRh_76ptBiaXIq2o",
+//   authDomain: "mslm-f5216.firebaseapp.com",
+//   projectId: "mslm-f5216",
+//   storageBucket: "mslm-f5216.appspot.com",
+//   messagingSenderId: "749641810921",
+//   appId: "1:749641810921:web:7439f0d42dfbc7ff498178",
+//   measurementId: "G-W1DTBVH0BP",
+// };
+
+export const useFirebase = () => useContext(FirebaseContext);
 
 const firebaseApp = initializeApp(firebaseConfig);
 const firebaseAuth = getAuth(firebaseApp);
@@ -56,11 +69,15 @@ export const FirebaseProvider = (props) => {
     }
   };
 
+  const notification = useNotification();
   const loginUserWithEmailAndPassword = (email, password) => {
     try {
       signInWithEmailAndPassword(firebaseAuth, email, password);
+      if (user) {
+        notification.success("Logged in");
+      }
     } catch (err) {
-      console.log(err);
+      notification.error("Wrong Credentials");
     }
   };
 
@@ -75,7 +92,7 @@ export const FirebaseProvider = (props) => {
     carImage
   ) => {
     // img upload
-    const imageRef = ref(storage, `carImages/${Date.now()}-${carImage.name}`);
+    const imageRef = ref(storage, `public/carImages/${Date.now()}-${carImage.name}`);
     const uploadResult = await uploadBytes(imageRef, carImage);
     // info upload
     try {
@@ -124,19 +141,19 @@ export const FirebaseProvider = (props) => {
     id,
   }) => {
     // img update
-    const imageRef = ref(
-      storage,
-      `carImages/${Date.now()}-${imageUrl.carName}`
-    );
+    // const imageRef = ref(
+    //   storage,
+    //   `public/carImages/${Date.now()}-${imageUrl.carName}`
+    // );
     try {
-      const uploadResult = await uploadBytes(imageRef, imageUrl);
+      // const uploadResult = await uploadBytes(imageRef, imageUrl);
       // info update
       await setDoc(doc(db, "posts", id), {
         carName,
         perDay,
         perMonth,
         description,
-        imageUrl: uploadResult.ref.fullPath,
+        // imageUrl: uploadResult.ref.fullPath,
       });
     } catch (err) {
       console.log(err);

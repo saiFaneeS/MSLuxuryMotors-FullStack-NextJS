@@ -26,10 +26,8 @@ const Login = () => {
     try {
       await firebase.loginUserWithEmailAndPassword(email, password);
       router.push("/admin");
-      notification.success("Logged in");
     } catch (err) {
       console.log(err);
-      // notification.error("");
     }
     setEmail("");
     setPassword("");

@@ -20,10 +20,13 @@
 }
 
 .contactInfo p {
+  color: inherit;
+}
+
+.contactInfo a {
   display: flex;
   align-items: center;
   gap: 0.7em;
-  color: inherit;
 }
 
 .contactInfo svg {

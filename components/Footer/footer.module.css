@@ -22,6 +22,10 @@
   color: inherit;
 }
 
+.socials:hover {
+  cursor: pointer;
+}
+
 .contactInfo a p {
   display: flex;
   align-items: center;

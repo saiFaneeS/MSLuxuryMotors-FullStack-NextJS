@@ -40,10 +40,6 @@
   align-items: center;
 }
 
-.links p {
-  color: #eee;
-}
-
 .status {
   text-wrap: nowrap;
 }

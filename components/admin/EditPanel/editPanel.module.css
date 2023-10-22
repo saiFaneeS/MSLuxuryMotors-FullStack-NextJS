@@ -1,9 +1,5 @@
 .editPanel {
   background-color: #fff;
-  /* background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px); */
-  /* border: 1px solid #ddd; */
   border-radius: 5px;
   box-shadow: 5px 10px 45px rgba(0, 0, 0, 0.1);
   width: 60%;

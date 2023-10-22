@@ -70,6 +70,8 @@
 .comment {
   color: #666;
   padding: 2em 1.5em;
+  position: relative;
+  z-index: 1;
 }
 
 .wrapper {
@@ -83,18 +85,6 @@
   background-color: #222;
 }
 
-.avatar {
-  position: absolute;
-  top: -2em;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  width: 4em;
-  height: 4em;
-  background-color: #eee;
-  border-radius: 50%;
-  border: 2px solid #fff;
-}
-
 .quoteIcon {
   position: absolute;
   right: 2em;
@@ -102,7 +92,7 @@
 }
 
 .quoteIcon svg {
-  color: #ddd;
+  color: #eee;
   font-size: 4em;
 }
 

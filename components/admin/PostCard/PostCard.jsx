@@ -41,8 +41,8 @@ const PostCard = (props) => {
             <Image
               src={url}
               quality="10"
-              width={150}
-              height={100}
+              width={360}
+              height={200}
               alt={props.carName}
             />
           ) : (

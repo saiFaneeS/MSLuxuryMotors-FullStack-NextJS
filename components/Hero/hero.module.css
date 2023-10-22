@@ -55,7 +55,7 @@
   line-height: 2em;
 }
 
-.cta {
+/* .cta {
   font-size: 1em;
   padding: 0.4em 2em;
   color: #fff;
@@ -69,7 +69,7 @@
 .cta:hover {
   color: var(--brandColor);
   background-color: transparent;
-}
+} */
 
 .panel {
   width: 33%;

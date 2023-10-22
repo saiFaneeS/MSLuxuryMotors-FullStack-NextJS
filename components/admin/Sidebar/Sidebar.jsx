@@ -28,7 +28,14 @@ export default function Sidebar() {
             </h3>
           </Link>
         </Box>
-        <Box sx={{ display: "flex", gap: "1em" }} className={styles.links}>
+        <Box
+          sx={{
+            display: "flex",
+            gap: "1em",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
           <Link className={styles.links} href="/admin/messages">
             <p>Messages</p>
             <IconButton color="inherit">
@@ -41,7 +48,7 @@ export default function Sidebar() {
               <AccountCircle />
             </IconButton>
           </Link>
-          {firebase.isLoggedIn ? (
+           {firebase.isLoggedIn ? (
             <div
               className={styles.status}
               style={{ display: "flex", gap: "0.5em", alignItems: "center" }}
@@ -56,7 +63,7 @@ export default function Sidebar() {
               <FiberManualRecord sx={{ color: "crimson" }} />
               <p>Logged Out</p>
             </div>
-          )}
+          )} 
         </Box>
       </div>
     </>

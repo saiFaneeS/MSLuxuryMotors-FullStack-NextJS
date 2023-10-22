@@ -38,43 +38,68 @@ const Card = ({ carName, perDay, perMonth, description, imageUrl }) => {
             </>
           )}
         </div>
-        <h3 className={styles.cardTitle}>{carName}</h3>
-        {perDay && perMonth ? (
-          <div className={styles.priceTag}>
-            <p>
-              <span>AED {perDay}</span> / Hour
-            </p>
-            <p>
-              <span>AED {perMonth}</span> / Day
-            </p>
-          </div>
-        ) : (
+        {carName ? (
           <>
-            <div className={styles.pricesAlt}></div>
-            <div className={styles.pricesAlt}></div>
+            <h3 className={styles.cardTitle}>{carName}</h3>
+            <div className={styles.priceTag}>
+              <p>
+                <span>AED {perDay}</span> / Hour
+              </p>
+              <p>
+                <span>AED {perMonth}</span> / Day
+              </p>
+            </div>
+            <p className={styles.cardDesc}>{description}</p>
+            <div className={styles.btns}>
+              <>
+                <Link href="tel:+0123456789">
+                  <Button
+                    variant="contained"
+                    sx={[
+                      {
+                        color: "#fff",
+                        backgroundColor: "#333",
+                        transition: "0.2s",
+                      },
+                      {
+                        "&:hover": {
+                          backgroundColor: "var(--darkerBrandColor)",
+                        },
+                      },
+                    ]}
+                  >
+                    <CallOutlined />
+                  </Button>
+                </Link>
+                <Link href="/">
+                  <Button
+                    variant="contained"
+                    sx={[
+                      {
+                        color: "#fff",
+                        backgroundColor: "#333",
+                        transition: "0.2s",
+                      },
+                      {
+                        "&:hover": {
+                          backgroundColor: "var(--darkerBrandColor)",
+                        },
+                      },
+                    ]}
+                  >
+                    Book This Car
+                  </Button>
+                </Link>
+              </>
+            </div>
           </>
-        )}
-        <p className={styles.cardDesc}>{description}</p>
-        <div className={styles.btns}>
-          {carName ? (
-            <>
-              <Link href="tel:+0123456789">
-                <Button variant="contained" className={styles.cardCta}>
-                  <CallOutlined />
-                </Button>
-              </Link>
-              <Link href="/">
-                <Button variant="contained" className={styles.cardCta}>
-                  Book This Car
-                </Button>
-              </Link>
-            </>
-          ) : (
-            <>
+        ) : (
+          <div className={styles.alt}>
+              <div className={styles.pricesAlt}></div>
+              <div className={styles.pricesAlt}></div>
               <div className={styles.cardCtaAlt}></div>
-            </>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );

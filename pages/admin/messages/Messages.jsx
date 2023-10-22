@@ -46,16 +46,20 @@ const Messages = () => {
                 <Refresh />
               </IconButton>
             </Box>
-            {messages.map((message) => {
-              return (
-                <Message
-                  key={message.id}
-                  msgId={message.id}
-                  {...message.data()}
-                  handleRefresh={handleRefresh}
-                />
-              );
-            })}
+            {messages.length > 0 ? (
+              messages.map((message) => {
+                return (
+                  <Message
+                    key={message.id}
+                    msgId={message.id}
+                    {...message.data()}
+                    handleRefresh={handleRefresh}
+                  />
+                );
+              })
+            ) : (
+              <Box sx={{ textAlign: "center" }}>No Messages Yet.</Box>
+            )}
           </main>
         </Layout>
       ) : (

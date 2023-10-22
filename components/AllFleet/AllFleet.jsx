@@ -23,7 +23,7 @@ const AllFleet = () => {
       </p>
       <Reveal>
         <div className={styles.cards}>
-          {!posts ? (
+          {posts.length === 0 ? (
             <>
               <Card />
               <Card />

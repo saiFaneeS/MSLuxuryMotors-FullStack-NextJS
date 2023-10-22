@@ -7,7 +7,13 @@ import { useNotification } from "@/context/notificationContext";
 
 const EditPanel = ({ setEditPanel, id, item }) => {
   const [newItem, setNewItem] = useState(item);
-  const { carName, perDay, perMonth, description, imageUrl } = newItem;
+  const {
+    carName,
+    perDay,
+    perMonth,
+    description,
+    // imageUrl
+  } = newItem;
 
   const firebase = useFirebase();
   const notification = useNotification();
@@ -21,7 +27,7 @@ const EditPanel = ({ setEditPanel, id, item }) => {
         perDay,
         perMonth,
         description,
-        imageUrl,
+        // imageUrl,
       });
       item.fetchUpdatedData();
       setEditPanel(false);
@@ -75,7 +81,7 @@ const EditPanel = ({ setEditPanel, id, item }) => {
             }
           ></textarea>
 
-          <input
+          {/* <input
             accept="image/"
             type="file"
             id="select-image"
@@ -93,7 +99,7 @@ const EditPanel = ({ setEditPanel, id, item }) => {
             >
               Upload New Image
             </Button>
-          </label>
+          </label> */}
 
           <Button
             variant="contained"
@@ -105,8 +111,9 @@ const EditPanel = ({ setEditPanel, id, item }) => {
               !newItem.carName ||
               !newItem.perDay ||
               !newItem.perMonth ||
-              !newItem.description ||
-              !newItem.imageUrl
+              !newItem.description 
+              // ||
+              // !newItem.imageUrl
             }
           >
             EDIT

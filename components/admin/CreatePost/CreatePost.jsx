@@ -3,6 +3,7 @@ import styles from "./createPost.module.css";
 import { Box, Button } from "@mui/material";
 import { useFirebase } from "@/context/firebase";
 import { useNotification } from "@/context/notificationContext";
+import Image from "next/image";
 
 const CreateOffer = (props) => {
   const [carName, setCarName] = useState("");
@@ -40,17 +41,16 @@ const CreateOffer = (props) => {
     setPerDay("");
     setPerMonth("");
     setDescription("");
+    setCarImage(null)
     const form = document.getElementById("createForm");
     if (form) {
       form.reset();
-    }
-    console.log(carImage);
-
+    } 
     notification.success("Post Successfully Added");
   };
 
   return (
-    <div style={{}} className={styles.main}>
+    <div className={styles.main}>
       <>
         <h2 style={{ color: "#222" }}>Create Offer</h2>
         <form className={styles.form} id="createForm">
@@ -100,12 +100,14 @@ const CreateOffer = (props) => {
               <div style={{ marginBottom: "10px", letterSpacing: "1px" }}>
                 PREVIEW
               </div>
-              <img
-                style={{ borderRadius: "5px" }}
+              <div className={styles.preview}>
+              <Image
                 src={imageUrl}
                 alt={""}
-                height="200px"
+                height="200"
+                width="300"
               />
+              </div>
             </Box>
           )}
           <br />

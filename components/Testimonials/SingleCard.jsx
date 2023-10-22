@@ -17,7 +17,19 @@ const SingleCard = () => {
         <FormatQuote />
       </div>
       <div className={styles.wrapper}>
-        <Avatar className={styles.avatar} />
+        <Avatar
+          sx={{
+            position: "absolute",
+            top: "-2em",
+            left: "50%",
+            transform: "translate(-50%, 0%)",
+            width: "4em",
+            height: " 4em",
+            backgroundColor: "#eee",
+            borderRadius: "50%",
+            border: "2px solid #fff",
+          }}
+        />
         <h3>John Doe</h3>
       </div>
     </div>

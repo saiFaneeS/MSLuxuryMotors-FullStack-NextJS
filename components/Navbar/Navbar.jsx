@@ -11,8 +11,6 @@ import { Button } from "@mui/material";
 const Navbar = () => {
   const [sidebar, setSidebar] = useState(false);
 
-  const router = useRouter();
-
   const toggleSidebar = () => {
     setSidebar(sidebar === true ? false : true);
     console.log(sidebar);
@@ -57,7 +55,19 @@ const Navbar = () => {
             <Link href="/about">Our Company</Link>
           </li>
           <Link href="/contact">
-            <Button variant="contained" className={styles.contactBtn}>Contact</Button>
+            <Button
+              variant="contained"
+              sx={{
+                fontSize: "1em",
+                padding: "0.2em 1.5em",
+                backgroundColor: "var(--brandColor)",
+                textTransform: "capitalize",
+                borderRadius: "2em",
+              }}
+              // className={styles.contactBtn}
+            >
+              Contact
+            </Button>
           </Link>
         </ul>
         <span onClick={toggleSidebar} className={styles.menuIcon}>

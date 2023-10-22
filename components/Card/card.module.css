@@ -56,15 +56,9 @@
   gap: 1em;
 }
 
-.cardCta {
-  color: #fff;
-  background-color: #333;
-  transition: 0.2s;
-}
-
-.cardCta:hover {
-  gap: 10em;
-  background-color: var(--darkerBrandColor);
+.alt {
+  position: relative;
+  margin-bottom: 2em;
 }
 
 .cardCtaAlt {
@@ -72,11 +66,14 @@
   background-color: #aaa;
   width: 5em;
   border-radius: 0.4em;
+  position: absolute;
+  right: 0;
 }
 
 .pricesAlt {
   background-color: #aaa;
   padding: 0.5em;
+  margin-bottom: 1em;
   width: 10em;
   border-radius: 1em;
 }
@@ -98,7 +95,7 @@
   position: absolute;
   top: 50%;
   rotate: -45deg;
-  animation: shine 2s infinite;
+  animation: shine 1s infinite;
 }
 
 .imgAlt::after {
@@ -110,7 +107,7 @@
   position: absolute;
   top: 50%;
   rotate: -45deg;
-  animation: shine2 2s infinite;
+  animation: shine2 1s infinite;
 }
 
 .imgAlt::after {
@@ -122,7 +119,7 @@
   position: absolute;
   top: 50%;
   rotate: -45deg;
-  animation: shine4 2s infinite;
+  animation: shine4 1s infinite;
 }
 
 @keyframes shine {

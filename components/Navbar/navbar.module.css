@@ -40,13 +40,13 @@
   color: #8c8c8c;
 }
 
-.contactBtn {
+/* .contactBtn {
   font-size: 1em;
   padding: 0.2em 1.5em;
   background-color: var(--brandColor);
   text-transform: capitalize;
   border-radius: 2em;
-}
+} */
 
 .menuIcon {
   position: relative;
