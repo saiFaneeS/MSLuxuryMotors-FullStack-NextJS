@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./welcome.module.css";
 import Link from "next/link";
 import { East } from "@mui/icons-material";
-import FromLeft from "../Animations/FromLeft";
+import FromBottom from "../Animations/FromBottom";
 import Image from "next/image";
 
 const Welcome = () => {
@@ -10,7 +10,7 @@ const Welcome = () => {
     <>
       <div className={`${styles.main}`}>
           <div className={styles.left}>
-        <FromLeft>
+        <FromBottom>
             <p className={styles.smText}>WELCOME TO</p>
             <h1 className={styles.lgText}>
               LUXURY LIMOUSINE CHAUFFEUR SERVICE IN DUBAI
@@ -29,7 +29,7 @@ const Welcome = () => {
                 OUR FLEET <East />
               </button>
             </Link>
-        </FromLeft>
+        </FromBottom>
           </div>
           <div className={styles.right}>
             <Image

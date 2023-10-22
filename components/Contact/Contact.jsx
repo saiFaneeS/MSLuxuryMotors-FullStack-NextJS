@@ -6,7 +6,7 @@ import { AiOutlineSend } from "react-icons/ai";
 import { useFirebase } from "@/context/firebase";
 import { Button } from "@mui/material";
 import { useNotification } from "@/context/notificationContext";
-import FromRight from "../Animations/FromRight";
+import FromBottom from "../Animations/FromBottom";
 import FadeIn from "../Animations/FadeIn";
 import FadeIn2 from "../Animations/FadeIn2";
 
@@ -60,7 +60,7 @@ const Contact = () => {
           </div>
         </div>
         <div className={styles.rightCol}>
-          <FromRight>
+          <FromBottom>
             <h2 className={styles.contact}>Contact Us</h2>
             <form>
               <div className={styles.firstI}>
@@ -104,7 +104,7 @@ const Contact = () => {
                 <AiOutlineSend />
               </Button>
             </form>
-          </FromRight>
+          </FromBottom>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ const Hero = () => {
       <div className={styles.col1}>
         <FromBottom>
           <h1 className={styles.title}>
-            HIRE AN ULTIMATE <span>MOTOR EXPERIENCE</span>
+            HIRE AN ULTIMATE <br/><span>MOTOR EXPERIENCE</span>
           </h1>
         </FromBottom>
         <FromBottom>

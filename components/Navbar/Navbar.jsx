@@ -5,7 +5,14 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import { MotionPhotosOffRounded } from "@mui/icons-material";
+import {
+  Close,
+  ContactPage,
+  Home,
+  Info,
+  MotionPhotosOffRounded,
+  TimeToLeave,
+} from "@mui/icons-material";
 import { Button } from "@mui/material";
 
 const Navbar = () => {
@@ -19,21 +26,29 @@ const Navbar = () => {
   return (
     <div className={styles.main}>
       <div className={styles.sidebar} style={{ top: sidebar ? "0" : "-150%" }}>
-        <span onClick={toggleSidebar} className={styles.close}>
-          <AiOutlineClose />
-        </span>
         <ul>
-          <li className={styles.link}>
-            <Link href="/">Home</Link>
+          <li onClick={toggleSidebar} className={styles.close}>
+            <Close />
           </li>
           <li className={styles.link}>
-            <Link href="/vehicles">Fleet</Link>
+            <Link href="/">
+              <Home /> Home
+            </Link>
           </li>
           <li className={styles.link}>
-            <Link href="/about">About Us</Link>
+            <Link href="/vehicles">
+              <TimeToLeave /> Our Fleet
+            </Link>
           </li>
           <li className={styles.link}>
-            <Link href="/contact">Contact</Link>
+            <Link href="/about">
+              <Info /> About Us
+            </Link>
+          </li>
+          <li className={styles.link}>
+            <Link href="/contact">
+              <ContactPage /> Contact
+            </Link>
           </li>
         </ul>
       </div>

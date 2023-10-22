@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./AllFleet.module.css";
 import { useFirebase } from "@/context/firebase";
 import Card from "../Card/Card";
-import Reveal from "../Animations/FromRight";
+import Reveal from "../Animations/FromBottom";
 
 const AllFleet = () => {
   const firebase = useFirebase();
