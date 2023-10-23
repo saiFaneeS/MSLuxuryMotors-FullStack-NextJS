@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Footer = () => {
   const handleWhatsAppRedirect = () => {
-    const phoneNumber = "03183886011";
+    const phoneNumber = "+9203183886011";
     const message = `Hello! I am interested in booking a Limousine Service.`;
 
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
@@ -36,7 +36,7 @@ const Footer = () => {
             <BsWhatsapp onClick={handleWhatsAppRedirect} />
           </div>
           <div className={styles.contactInfo}>
-            <a href="tel:0123456789">
+            <a href="tel:+92 0123456789">
               <p>
                 <IoIosCall /> 0123456789
               </p>
@@ -69,7 +69,7 @@ const Footer = () => {
 
       <div className={styles.footerLinks}>
         <Link href="/terms-conditions">Terms & Conditions</Link>
-        <p style={{fontWeight: "600"}}>Developed By Saif Anees</p>
+        <p style={{ fontWeight: "600" }}>Developed By Saif Anees</p>
         <Link href="/privacy-policy">Privacy & Policy</Link>
       </div>
     </div>

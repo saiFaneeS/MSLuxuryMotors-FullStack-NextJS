@@ -7,6 +7,7 @@ import { Refresh } from "@mui/icons-material";
 import { Box, IconButton } from "@mui/material";
 import { useNotification } from "@/context/notificationContext";
 import Profile from "../profile";
+import Head from "next/head";
 
 const Messages = () => {
   const [messages, setMessages] = useState([]);
@@ -30,6 +31,9 @@ const Messages = () => {
     <>
       {firebase.isLoggedIn ? (
         <Layout>
+          <Head>
+            <title>Messages | Admin Dashboard</title>
+          </Head>
           <main className={styles.main}>
             <div className={styles.navBar}>
               <h2 className={styles.title}>Messages</h2>

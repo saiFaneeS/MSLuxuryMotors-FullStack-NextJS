@@ -9,7 +9,7 @@ import styles from "./globalNav.module.css";
 
 const GlobalNav = () => {
   const handleWhatsAppRedirect = () => {
-    const phoneNumber = "03183886011";
+    const phoneNumber = "+9203183886011";
     const message = `Hello! I am interested in booking a Limousine Service.`;
 
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
@@ -23,9 +23,9 @@ const GlobalNav = () => {
     <div className={styles.main}>
       <div className={styles.contactInfo}>
         <p>
-          <Link href="tel:0123456789">
+          <Link href="tel:+920123456789">
             <IoIosCall />
-            0123456789
+            +92 0123456789
           </Link>
         </p>
         <p>

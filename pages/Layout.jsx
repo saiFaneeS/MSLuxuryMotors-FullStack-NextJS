@@ -14,15 +14,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <title>MSLuxuryMotors</title>
-        <meta
-          name="description"
-          content="Experience unparalleled luxury and comfort with MS Luxury Motors. Our professional chauffeurs provide top-notch limousine services for all your special occasions. Whether it's a wedding, corporate event, or a night out on the town, trust us for a stylish and safe journey. Book your dream limousine experience today."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.png" />
       </Head>
-
       <div className={montserrat.className} style={{ overflow: "hidden" }}>
         <GlobalNav />
         <Navbar />

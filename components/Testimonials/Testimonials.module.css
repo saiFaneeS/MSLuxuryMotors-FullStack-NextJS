@@ -2,7 +2,7 @@
   height: 100%;
   margin-top: 3em;
   padding: 6em 0;
-  background-color: #111;
+  background-color: var(--darkestColor);
   border-bottom: 1px solid #444;
 }
 
@@ -43,10 +43,11 @@
 
 .innerCarousel::-webkit-scrollbar-track {
   background-color: transparent;
+  margin: 0 8em;
 }
 
 .innerCarousel::-webkit-scrollbar-thumb {
-  background-color: #444;
+  background-color: #333;
   border-radius: 10px;
 }
 
@@ -60,7 +61,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* overflow: hidden; */
   position: relative;
 }
 
@@ -79,7 +79,7 @@
   border-radius: 4px;
   padding: 3.5em 0 1.5em 0;
   color: #fff;
-  background-color: #222;
+  background-color: #111;
 }
 
 .quoteIcon {

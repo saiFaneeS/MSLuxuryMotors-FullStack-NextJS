@@ -27,7 +27,7 @@ const SingleCard = () => {
               transform: "translate(-50%, 0%)",
               width: "4em",
               height: " 4em",
-              backgroundColor: "#eee",
+              backgroundColor: "#888",
               borderRadius: "50%",
               border: "2px solid #fff",
             }}

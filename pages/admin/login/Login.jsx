@@ -12,6 +12,7 @@ import { useFirebase } from "@/context/firebase";
 import Link from "next/link";
 import { useNotification } from "@/context/notificationContext";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 const Login = () => {
   const [email, setEmail] = React.useState("");
@@ -35,6 +36,10 @@ const Login = () => {
 
   return (
     <Layout className={styles.main}>
+      <Head>
+        <title>Login User - Admin Dashboard</title>
+      </Head>
+
       <Container component="main">
         <Box
           sx={{

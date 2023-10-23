@@ -5,6 +5,7 @@ import { useFirebase } from "@/context/firebase";
 import Layout from "./Layout";
 import styles from "./Home.module.css";
 import Profile from "./profile";
+import Head from "next/head";
 
 const montserrat = Montserrat({
   weight: ["400", "500", "600", "700", "800"],
@@ -17,6 +18,9 @@ const Home = () => {
     <>
       {firebase.isLoggedIn ? (
         <Layout className={montserrat.className}>
+          <Head>
+            <title>Manage All Posts - Admin Dashboard</title>
+          </Head>
           <main>
             <div className={styles.navBar}>
               <h2 className={styles.title}>Dashboard</h2>

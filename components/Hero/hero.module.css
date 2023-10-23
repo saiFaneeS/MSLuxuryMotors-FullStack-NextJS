@@ -6,7 +6,7 @@
   max-height: fit-content;
   padding: 4em 0;
   padding-left: 12%;
-  background-color: #111;
+  background-color: var(--darkestColor);
   padding-bottom: 6em;
   color: #fff;
   overflow: hidden;
@@ -15,7 +15,6 @@
 .col1 {
   flex-basis: 30%;
   padding-right: 1em;
-  /* overflow: hidden; */
 }
 
 .col2 {

@@ -5,7 +5,7 @@
   padding: 1.5em 12%;
   padding-top: 5.5em;
   position: relative;
-  background-color: #111;
+  background-color: var(--darkestColor);
 }
 
 .logo {
@@ -37,16 +37,8 @@
 }
 
 .link:hover {
-  color: #8c8c8c;
+  color: var(--darkerBrandColor);
 }
-
-/* .contactBtn {
-  font-size: 1em;
-  padding: 0.2em 1.5em;
-  background-color: var(--brandColor);
-  text-transform: capitalize;
-  border-radius: 2em;
-} */
 
 .menuIcon {
   position: relative;

@@ -21,7 +21,7 @@ const Card = ({ carName, perDay, perMonth, description, imageUrl }) => {
   }, []);
 
   const handleWhatsAppRedirect = () => {
-    const phoneNumber = "03183886011";
+    const phoneNumber = "+9203183886011";
     const message = `Hello! I am interested in booking this *${carName}*. \nPer Hour: AED ${perDay}, \nPer Day: AED ${perMonth}.`;
 
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
@@ -63,13 +63,13 @@ const Card = ({ carName, perDay, perMonth, description, imageUrl }) => {
             <p className={styles.cardDesc}>{description}</p>
             <div className={styles.btns}>
               <>
-                <Link href="tel:+0123456789">
+                <Link href="tel:+920123456789">
                   <Button
                     variant="contained"
                     sx={[
                       {
                         color: "#fff",
-                        backgroundColor: "#333",
+                        backgroundColor: "#222",
                         transition: "0.2s",
                       },
                       {
@@ -89,7 +89,7 @@ const Card = ({ carName, perDay, perMonth, description, imageUrl }) => {
                     sx={[
                       {
                         color: "#fff",
-                        backgroundColor: "#333",
+                        backgroundColor: "#222",
                         transition: "0.2s",
                       },
                       {

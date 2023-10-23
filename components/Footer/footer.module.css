@@ -10,7 +10,7 @@
   align-items: flex-start;
   gap: 2em;
   border-bottom: 1px solid #aaa;
-  color: #333;
+  color: #222;
 }
 
 .socials {
@@ -41,7 +41,7 @@
 .col2 {
   display: flex;
   gap: 2em;
-  color: #444;
+  color: inherit;
 }
 
 .col2 a {
@@ -81,7 +81,7 @@
   align-items: center;
   gap: 1em;
   height: min-content;
-  color: #444;
+  color: inherit;
   overflow: hidden;
   padding: 2em 12%;
 }

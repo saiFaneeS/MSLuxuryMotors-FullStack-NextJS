@@ -7,10 +7,11 @@ import Collapse from "@mui/material/Collapse";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Delete } from "@mui/icons-material";
-import { Box } from "@mui/material";
+import { Delete, Mail, Phone } from "@mui/icons-material";
+import { Avatar, Box } from "@mui/material";
 import { useFirebase } from "@/context/firebase";
 import { useNotification } from "@/context/notificationContext";
+import styles from "./Message.module.css";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -59,25 +60,72 @@ export default function Message({
       <CardContent
         sx={{
           display: "flex",
-          alignItems: "center",
+          alignItems: "flex-start",
           justifyContent: "space-between",
+          gap: "1em",
+          flexWrap: "wrap",
         }}
       >
-        <Typography variant="h5" color="text.secondary">
-          By: {name}
+        <Typography
+          sx={{ display: "flex", gap: "0.5em" }}
+          variant="h5"
+          color="var(--brandColor)"
+        >
+          <Avatar
+            sx={{
+              height: "1.5em",
+              width: "1.5em",
+              backgroundColor: "var(--brandColor)",
+            }}
+          />
+          {name}
         </Typography>
-        <Box sx={{ textAlign: "right" }}>
-          <Typography variant="body2" color="text.secondary">
-            {email}
+        <Box
+          sx={{
+            textAlign: "left",
+            display: "flex",
+            flexDirection: "column",
+            gap: "0.5em",
+          }}
+        >
+          <Typography
+            variant="body1"
+            color="text.secondary"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: "0.5em",
+              flexWrap: "wrap",
+            }}
+          >
+            <Mail sx={{ height: "1em" }} /> {email}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {phone}
+          <Typography
+            variant="body1"
+            color="text.secondary"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: "0.5em",
+              flexWrap: "wrap",
+            }}
+          >
+            <Phone sx={{ height: "1em" }} /> {phone}
           </Typography>
         </Box>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="share" onClick={handleDelete}>
-          <Delete />
+          <Delete
+            sx={[
+              { transition: "0.1s" },
+              {
+                "&:hover": {
+                  color: "crimson",
+                },
+              },
+            ]}
+          />
         </IconButton>
         <ExpandMore
           expand={expanded}

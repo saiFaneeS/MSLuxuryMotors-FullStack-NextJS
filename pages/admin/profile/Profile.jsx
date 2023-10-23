@@ -6,6 +6,7 @@ import { Avatar, Box, Button } from "@mui/material";
 import { signOut } from "firebase/auth";
 import Link from "next/link";
 import { useNotification } from "@/context/notificationContext";
+import Head from "next/head";
 
 const Messages = () => {
   const firebase = useFirebase();
@@ -25,6 +26,9 @@ const Messages = () => {
 
   return (
     <Layout>
+      <Head>
+        <title>User Profile - Admin Dashboard</title>
+      </Head>
       <main className={styles.main}>
         <Avatar
           sx={{
@@ -41,7 +45,9 @@ const Messages = () => {
           </p>
           <Box margin={"2em auto"} width={"fit-content"}>
             <p style={{ margin: "1em", color: "#666" }}>
-              {firebase.user ? "Logout to Signin as a different User." : "Please Signin to proceed."}
+              {firebase.user
+                ? "Logout to Signin as a different User."
+                : "Please Signin to proceed."}
             </p>
             {firebase.user && (
               <Link href={"/admin/signup"}>
