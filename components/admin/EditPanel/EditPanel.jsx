@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./editPanel.module.css";
 import { Button } from "@mui/material";
 import { Close } from "@mui/icons-material";
@@ -7,12 +7,7 @@ import { useNotification } from "@/context/notificationContext";
 
 const EditPanel = ({ setEditPanel, id, item, imageUrl }) => {
   const [newItem, setNewItem] = useState(item);
-  const {
-    carName,
-    perDay,
-    perMonth,
-    description,
-  } = newItem;
+  const { carName, perDay, perMonth, description } = newItem;
 
   const firebase = useFirebase();
   const notification = useNotification();
@@ -110,7 +105,7 @@ const EditPanel = ({ setEditPanel, id, item, imageUrl }) => {
               !newItem.carName ||
               !newItem.perDay ||
               !newItem.perMonth ||
-              !newItem.description 
+              !newItem.description
               // ||
               // !newItem.imageUrl
             }
