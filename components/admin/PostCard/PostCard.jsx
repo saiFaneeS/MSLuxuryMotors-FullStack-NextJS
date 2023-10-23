@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./card.module.css";
-import { Box } from "@mui/material";
-import { DeleteForever, Edit } from "@mui/icons-material";
+import { Box, IconButton } from "@mui/material";
+import { Create, Delete } from "@mui/icons-material";
 import { useFirebase } from "@/context/firebase";
 import EditPanel from "../EditPanel/EditPanel";
 import { useNotification } from "@/context/notificationContext";
@@ -15,7 +15,7 @@ const PostCard = (props) => {
   const notification = useNotification();
 
   useEffect(() => {
-    firebase.getImageUrl(props.imageUrl).then((url) => setUrl(url));
+    // firebase.getImageUrl(props.imageUrl).then((url) => setUrl(url));
   }, []);
 
   const deleteItem = async (e) => {
@@ -23,9 +23,9 @@ const PostCard = (props) => {
     try {
       await firebase.deletePost(props.id);
       notification.success("Post Deleted");
-        if (props.fetchUpdatedData) {
-          props.fetchUpdatedData(); 
-        }
+      if (props.fetchUpdatedData) {
+        props.fetchUpdatedData();
+      }
     } catch (error) {
       console.error("Error deleting item:", error);
       //return notification.error("");
@@ -53,7 +53,7 @@ const PostCard = (props) => {
               alt={props.carName}
             />
           ) : (
-            ""
+            <div className={styles.imgAlt}></div>
           )}
         </div>
         <div className={styles.info}>
@@ -69,13 +69,17 @@ const PostCard = (props) => {
         </div>
       </div>
       <div className={styles.tools}>
-        <Edit
+        <IconButton
+          aria-label="share"
           onClick={() => {
             setEditPanel(!editPanel);
-            console.log(props.id);
           }}
-        />
-        <DeleteForever onClick={deleteItem} sx={{ marginLeft: "10px" }} />
+        >
+          <Create sx={{ fontSize: "1.3em" }} />
+        </IconButton>
+        <IconButton aria-label="share" onClick={deleteItem}>
+          <Delete sx={{ fontSize: "1.3em" }} />
+        </IconButton>
       </div>
     </Box>
   );

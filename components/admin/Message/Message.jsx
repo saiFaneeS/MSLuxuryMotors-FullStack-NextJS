@@ -11,7 +11,6 @@ import { Delete, Mail, Phone } from "@mui/icons-material";
 import { Avatar, Box } from "@mui/material";
 import { useFirebase } from "@/context/firebase";
 import { useNotification } from "@/context/notificationContext";
-import styles from "./Message.module.css";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;

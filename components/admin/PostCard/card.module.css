@@ -49,16 +49,6 @@
   color: #999;
 }
 
-.tools * {
-  font-size: 1.7em;
-  cursor: pointer;
-  transition: 0.1s;
-}
-
-.tools *:hover {
-  color: #bbb;
-}
-
 @media screen and (width <= 620px) {
   .main {
     flex-direction: column;
@@ -77,5 +67,36 @@
   .tools {
     margin-top: 1em;
     margin-bottom: 2em;
+  }
+}
+
+.imgAlt {
+  background-color: #aaa;
+  width: 12em;
+  height: 7em;
+  position: relative;
+}
+
+.imgAlt::before {
+  content: "";
+  background-color: #fff;
+  filter: blur(50px);
+  width: 10em;
+  height: 2em;
+  position: absolute;
+  top: 50%;
+  rotate: -45deg;
+  animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -150%;
+  }
+  50% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
   }
 }

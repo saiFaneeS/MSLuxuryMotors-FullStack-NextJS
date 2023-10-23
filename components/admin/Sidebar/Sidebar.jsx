@@ -31,22 +31,22 @@ export default function Sidebar() {
         <Box
           sx={{
             display: "flex",
-            gap: "1em",
+            gap: "0.5em",
             display: "flex",
             alignItems: "center",
           }}
         >
           <Link className={styles.links} href="/admin/messages">
-            <p>Messages</p>
             <IconButton color="inherit">
               <ChatBubble />
             </IconButton>
+            <p>Messages</p>
           </Link>
           <Link className={styles.links} href="/admin/profile">
-            <p>Account</p>
             <IconButton color="inherit">
               <AccountCircle />
             </IconButton>
+            <p>Account</p>
           </Link>
            {firebase.isLoggedIn ? (
             <div

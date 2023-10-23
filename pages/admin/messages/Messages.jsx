@@ -36,7 +36,7 @@ const Messages = () => {
           </Head>
           <main className={styles.main}>
             <div className={styles.navBar}>
-              <h2 className={styles.title}>Messages</h2>
+              <h2 className={styles.title}>Messages ({messages.length})</h2>
               <div className={styles.userInfo}>
                 <p className={styles.text}>
                   View and manage user messages here. This is your central hub
