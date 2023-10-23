@@ -15,7 +15,7 @@ const PostCard = (props) => {
   const notification = useNotification();
 
   useEffect(() => {
-    // firebase.getImageUrl(props.imageUrl).then((url) => setUrl(url));
+    firebase.getImageUrl(props.imageUrl).then((url) => setUrl(url));
   }, []);
 
   const deleteItem = async (e) => {
